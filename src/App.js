@@ -8,8 +8,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     minWidth: "100vw",
     backgroundImage: `url(${
-      process.env.PUBLIC_URL + "/assets/darkguitar.jpg"
+      process.env.PUBLIC_URL + "/assets/neonGuitar.jpg"
     })`,
+    opacity: "0.8",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },

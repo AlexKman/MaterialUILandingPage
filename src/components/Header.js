@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   App: {
@@ -24,12 +25,20 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     color: "white",
-    fontSize: "1.5em",
+    fontSize: "2.2em",
     flexGrow: "1",
   },
   wrapper: {
     width: "100%",
     margin: "auto",
+  },
+  down: {
+    color: "white",
+    fontSize: "2em",
+  },
+  centralText: {
+    textAlign: "center",
+    fontSize: "2em",
   },
 }));
 
@@ -47,11 +56,14 @@ export default function Header() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div>
+      <div className={classes.centralText}>
         <h2 className={classes.header}>
           Welcome to <br></br>My{" "}
           <span className={classes.altTextColor}>Guitar World</span>
         </h2>
+        <IconButton>
+          <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
+        </IconButton>
       </div>
     </div>
   );
