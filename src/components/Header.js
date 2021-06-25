@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
   },
   header: {
-    color: "white",
+    color: "#FF0000",
     fontSize: "2.2em",
     flexGrow: "1",
   },
@@ -34,17 +34,22 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
   down: {
-    color: "white",
-    fontSize: "2em",
+    color: "#FF0000",
+    fontSize: "4em",
   },
   centralText: {
     textAlign: "center",
     fontSize: "2em",
+    marginTop: "4em",
   },
 }));
 
 export default function Header() {
   const classes = useStyles();
+  const [checked, setChecked] = useState(false);
+  useEffect(() => {
+    setChecked(true);
+  });
   return (
     <div className={classes.App}>
       <AppBar className={classes.AppBar} elevation={0}>
@@ -57,11 +62,14 @@ export default function Header() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Collapse in={true}>
+      <Collapse
+        in={checked}
+        {...(checked ? { timeout: 1000 } : {})}
+        collapsedHeight={50}
+      >
         <div className={classes.centralText}>
           <h2 className={classes.header}>
-            Welcome to <br></br>My{" "}
-            <span className={classes.altTextColor}>Guitar World</span>
+            <span className={classes.altTextColor}>My Guitar World</span>
           </h2>
           <IconButton>
             <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
