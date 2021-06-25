@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Collapse from "@material-ui/core/Collapse";
 
 const useStyles = makeStyles((theme) => ({
   App: {
@@ -56,15 +57,17 @@ export default function Header() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div className={classes.centralText}>
-        <h2 className={classes.header}>
-          Welcome to <br></br>My{" "}
-          <span className={classes.altTextColor}>Guitar World</span>
-        </h2>
-        <IconButton>
-          <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
-        </IconButton>
-      </div>
+      <Collapse in={true}>
+        <div className={classes.centralText}>
+          <h2 className={classes.header}>
+            Welcome to <br></br>My{" "}
+            <span className={classes.altTextColor}>Guitar World</span>
+          </h2>
+          <IconButton>
+            <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
+          </IconButton>
+        </div>
+      </Collapse>
     </div>
   );
 }
