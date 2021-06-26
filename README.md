@@ -17,4 +17,4 @@ You will also see any lint errors in the console.
 Below is a list of resources that I have used:
 
 1. https://material-ui.com/
-2. https://www.pexels.com/search/guitar/
+2. https://www.pexels.com/
