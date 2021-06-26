@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VisitedCard() {
+export default function VisitedCard({ placesVisited }) {
   const classes = useStyles();
 
   return (
@@ -37,7 +37,7 @@ export default function VisitedCard() {
         component="img"
         alt="Island"
         height="140"
-        image={process.env.PUBLIC_URL + "/assets/visited/Island1.jpeg"}
+        image={placesVisited.imageUrl}
         title="Island"
       />
       <CardContent>
@@ -47,7 +47,7 @@ export default function VisitedCard() {
           component="h3"
           className={classes.header}
         >
-          Island 1
+          {placesVisited.title}
         </Typography>
         <Typography
           variant="body2"
@@ -55,7 +55,7 @@ export default function VisitedCard() {
           component="p"
           className={classes.description}
         >
-          I went to Island 1 on holiday, I had a great time swimming
+          {placesVisited.description}
         </Typography>
       </CardContent>
     </Card>
