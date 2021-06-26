@@ -8,7 +8,7 @@ const VisitedPlaces = [
     title: "Island 2",
     description:
       "Expensive, but definitely worth it, weather was amazing all week",
-    imageUrl: process.env.PUBLIC_URL + "assets/visited/Image2.jpeg",
+    imageUrl: process.env.PUBLIC_URL + "assets/visited/Island2.jpeg",
   },
   {
     title: "Island 3",
@@ -17,7 +17,8 @@ const VisitedPlaces = [
   },
   {
     title: "Island 4",
-    description: "I almost drowned, would not recommend",
+    description:
+      "I almost drowned, would not recommend for people who cannot swim",
     imageUrl: process.env.PUBLIC_URL + "assets/visited/Island4.jpeg",
   },
 ];

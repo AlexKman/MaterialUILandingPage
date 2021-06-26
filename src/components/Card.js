@@ -9,6 +9,7 @@ const useStyles = makeStyles({
   main: {
     maxWidth: 375,
     background: "rgba(0,0,0,0.5)",
+    margin: "1em",
   },
   mediaImage: {
     height: 300,
