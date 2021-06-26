@@ -10,13 +10,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontFamily: "Newsreader",
     height: "100vh",
     width: "100vw",
+    fontFamily: "roboto, monospace",
   },
   AppBar: {
     background: "none",
-    fontFamily: "Newsreader",
   },
   icon: {
     color: "#f9f9f9",
@@ -30,12 +29,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: "1",
   },
   wrapper: {
-    width: "100%",
+    width: "85%",
     margin: "auto",
   },
   down: {
-    color: "#FF0000",
-    fontSize: "4em",
+    color: "white",
+    fontSize: "3em",
   },
   centralText: {
     textAlign: "center",
@@ -55,7 +54,7 @@ export default function Header() {
       <AppBar className={classes.AppBar} elevation={0}>
         <Toolbar className={classes.wrapper}>
           <h2 className={classes.header}>
-            Guitar<span className={classes.altTextColor}>world.</span>
+            <span className={classes.altTextColor}>Holiday Blog.</span>
           </h2>
           <IconButton>
             <SortIcon className={classes.icon}></SortIcon>
@@ -69,7 +68,7 @@ export default function Header() {
       >
         <div className={classes.centralText}>
           <h2 className={classes.header}>
-            <span className={classes.altTextColor}>My Guitar World</span>
+            <span className={classes.altTextColor}>My Holiday Blog</span>
           </h2>
           <IconButton>
             <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>

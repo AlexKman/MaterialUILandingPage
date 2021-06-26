@@ -7,9 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
     minWidth: "100vw",
-    backgroundImage: `url(${
-      process.env.PUBLIC_URL + "/assets/neonGuitar.jpg"
-    })`,
+    backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/tropical.jpeg"})`,
     opacity: "0.8",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
