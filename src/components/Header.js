@@ -50,7 +50,7 @@ export default function Header() {
     setChecked(true);
   });
   return (
-    <div className={classes.App}>
+    <div className={classes.App} id="header">
       <AppBar className={classes.AppBar} elevation={0}>
         <Toolbar className={classes.wrapper}>
           <h2 className={classes.header}>

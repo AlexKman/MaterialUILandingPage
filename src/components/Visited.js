@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import VisitedCard from "./Card";
 import VisitedPlaces from "../VisitedPlaces";
+import useWindowPosition from "../hook/windowPosition";
 
 const useStyles = makeStyles((theme) => ({
   visited: {
@@ -14,10 +15,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function () {
   const classes = useStyles();
+  const checked = useWindowPosition("header");
   return (
     <div className={classes.visited}>
       {VisitedPlaces.map((place) => (
-        <VisitedCard placesVisited={place}></VisitedCard>
+        <VisitedCard placesVisited={place} checked={checked}></VisitedCard>
       ))}
     </div>
   );
