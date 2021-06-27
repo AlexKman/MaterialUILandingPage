@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   main: {
     maxWidth: 375,
     background: "rgba(0,0,0,0.5)",
-    margin: "1em",
+    margin: "1.2em",
   },
   mediaImage: {
     height: 300,
@@ -42,12 +42,7 @@ export default function VisitedCard({ placesVisited }) {
         title="Island"
       />
       <CardContent>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="h3"
-          className={classes.header}
-        >
+        <Typography gutterBottom component="h1" className={classes.header}>
           {placesVisited.title}
         </Typography>
         <Typography
