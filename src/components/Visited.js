@@ -16,10 +16,9 @@ export default function () {
   const classes = useStyles();
   return (
     <div className={classes.visited}>
-      <VisitedCard placesVisited={VisitedPlaces[0]}></VisitedCard>
-      <VisitedCard placesVisited={VisitedPlaces[1]}></VisitedCard>
-      <VisitedCard placesVisited={VisitedPlaces[2]}></VisitedCard>
-      <VisitedCard placesVisited={VisitedPlaces[3]}></VisitedCard>
+      {VisitedPlaces.map((place) => (
+        <VisitedCard placesVisited={place}></VisitedCard>
+      ))}
     </div>
   );
 }
