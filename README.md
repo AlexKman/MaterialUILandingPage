@@ -19,3 +19,4 @@ Below is a list of resources that I have used:
 1. https://material-ui.com/
 2. https://www.pexels.com/
 3. https://gist.github.com/asyncnavi/76a493b4701046716c84466116bfe111
+4. https://material-ui.com/customization/breakpoints/
