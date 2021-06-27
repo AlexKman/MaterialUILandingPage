@@ -17,7 +17,7 @@ export default function () {
   const classes = useStyles();
   const checked = useWindowPosition("header");
   return (
-    <div className={classes.visited}>
+    <div className={classes.visited} id="visited">
       {VisitedPlaces.map((place) => (
         <VisitedCard placesVisited={place} checked={checked}></VisitedCard>
       ))}

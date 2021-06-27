@@ -4,6 +4,7 @@ import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import SortIcon from "@material-ui/icons/Sort";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
+import { Link as Scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   App: {
@@ -70,9 +71,11 @@ export default function Header() {
           <h2 className={classes.header}>
             <span className={classes.altTextColor}>My Holiday Blog</span>
           </h2>
-          <IconButton>
-            <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
-          </IconButton>
+          <Scroll to="visited" smooth={true}>
+            <IconButton>
+              <ExpandMoreIcon className={classes.down}></ExpandMoreIcon>
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>
