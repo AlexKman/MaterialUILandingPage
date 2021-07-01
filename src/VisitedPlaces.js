@@ -21,6 +21,16 @@ const VisitedPlaces = [
       "I almost drowned, would not recommend for people who cannot swim",
     imageUrl: process.env.PUBLIC_URL + "assets/visited/Island4.jpeg",
   },
+  {
+    title: "Island 5",
+    description: "Incredible experience, so clean and healthy",
+    imageUrl: process.env.PUBLIC_URL + "assets/visited/Island3.jpeg",
+  },
+  {
+    title: "Island 6",
+    description: "Beautiful clear water, friendly people",
+    imageUrl: process.env.PUBLIC_URL + "assets/visited/Island1.jpeg",
+  },
 ];
 
 export default VisitedPlaces;

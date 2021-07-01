@@ -12,6 +12,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("md")]: { flexDirection: "column" },
   },
+
+  "& div": {
+    flexGrow: "1",
+  },
+  visitedItemsGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gridTemplateRows: "auto",
+  },
 }));
 
 export default function () {
@@ -19,9 +28,11 @@ export default function () {
   const checked = useWindowPosition("header");
   return (
     <div className={classes.visited} id="visited">
-      {VisitedPlaces.map((place) => (
-        <VisitedCard placesVisited={place} checked={checked}></VisitedCard>
-      ))}
+      <div className={classes.visitedItemsGrid}>
+        {VisitedPlaces.map((place) => (
+          <VisitedCard placesVisited={place} checked={checked}></VisitedCard>
+        ))}
+      </div>
     </div>
   );
 }
